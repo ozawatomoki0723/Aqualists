@@ -1,24 +1,17 @@
-# README
+# **AquaLists** 
+## サイト概要
+AquaListsではアクアリストたちが自慢の水槽を披露し、ユーザー同士の交流の場とする。ユーザーは写真の投稿、他ユーザーの投稿の閲覧・コメントができる。
+## サイトテーマ
+アクアリウムというのはあまりメジャーな趣味ではない。そして、コケや魚の病気などの多くのトラブルと戦わなくてはならない趣味でもある。だからこそ、共通の趣味を持っている人とつながりを持つことが大事だと思う。これを踏まえて、
+- 自慢の水槽レイアウト、愛しい魚を披露する機会を作り,ユーザーのアクアリウムへのモチベーションを高めること。
+- 経験豊富なアクアリストからアドバイスをもらうことや、他人の投稿から参考にできるような技術を学びユーザーのレベルアップにつながること。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+上記の２つをサイトのメインテーマとし、作成する。
+## テーマを選んだ理由
+アクアリウムという趣味のコミュニティの活発化を目指し、延いてはアクアリウム業界の発展、規模拡大にも貢献できると考えたから。
+## ターゲットユーザ
+アクアリウムを趣味としている人。
+## 主な利用シーン
+インスタグラムやツイッターなどの普段使っているSNSでは趣味（アクアリウム関連）の投稿を控えてしまうような人に思う存分投稿してもらいたい。
+### 機能一覧
+[スプレッドシート](https://docs.google.com/spreadsheets/d/1s1aHeRQbizrESD4gXWJ_8KvLxHbUuwu3hOl3b8efJNQ/edit?usp=sharing)
