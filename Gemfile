@@ -43,6 +43,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  gem 'sqlite3', '1.3.13'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -66,11 +67,7 @@ gem 'jquery-rails'
 gem 'devise', '~> 4.6.1'
 gem 'carrierwave', '~> 1.0'
 
+gem 'dotenv-rails'
 group :production do
-  gem 'pg', '0.20.0'
-end
-
-group :development, :test do
-  gem 'sqlite3', '1.3.13'
-  gem 'byebug',  '9.0.6', platform: :mri
+  gem 'mysql2'
 end
