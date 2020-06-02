@@ -3,7 +3,6 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :likes
   has_many :comments
-  attachment :profile_photo
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
