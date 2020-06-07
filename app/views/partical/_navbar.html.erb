@@ -6,10 +6,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-md-auto align-items-center">
-        <li><%= link_to "Q&A", "#",class: "btn btn-success" %></li>
+        <li><%= link_to "質問する", new_question_path, class: "btn btn-success" %></li>
+       <li><%= link_to "質問一覧", questions_path, class: "btn btn-secondary" %></li>
         <li><%= link_to "投稿", new_post_path, class: "btn btn-primary" %></li>
         <li>
-          <%= link_to "", user_path(current_user), class: "nav-link commonNavIcon profile-icon" %></li>
+          <%= link_to "マイページ", user_path(current_user), class: "btn btn-light" %></li>
       </ul>
     </div>
   </div>

@@ -10,5 +10,7 @@ resources :photos, only: %i(create)
 resources :likes, omly: %i(create destroy)
 resources :comments, only: %i(create destroy)
 end
-
+resources :questions, only: %i(new create index show destroy)do
+resources :qphotos, only: %i(create)
+end
 end

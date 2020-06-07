@@ -1,0 +1,44 @@
+<% @questions.each do |question| %>
+  <div class="col-md-8 col-md-2 mx-auto">
+    <div class="card-wrap">
+      <div class="card">
+        <div class="card-header align-items-center d-flex">
+          <%= link_to user_path(question.user), class: "no-text-decoration" do %>
+            <%= image_tag avatar_url(question.user), class: "question-profile-icon" %>
+          <% end %>
+          <%= link_to user_path(question.user), class: "black-color no-text-decoration",
+            title: question.user.name do %>
+            <strong><%= question.user.name %></strong>
+          <% end %>
+          <% if question.user_id == current_user.id %>
+            <%= link_to question_path(question), method: :delete, class: "ml-auto mx-0 my-auto" do %>
+              <div class="delete-post-icon">
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+
+        <%= image_tag question.qphotos.first.image.url, class: "card-img-top" %>
+
+        <div class="card-body">
+          <div class="row parts">
+            <%= link_to "", "#", class: "comment" %>
+          </div>
+            <span><strong><%= question.user.name %></strong></span>
+            <span><%= question.title %></span>
+            <p><%= question.body %><p>
+            <%= link_to time_ago_in_words(question.created_at).upcase + "前", "#", class: "question-time no-text-decoration" %>
+            <hr>
+            <div class="row parts">
+              <form action="#" class="w-100">
+                <div>
+                  <textarea class="form-control comment-input border-0" placeholder="コメント..." rows="1"></textarea>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
