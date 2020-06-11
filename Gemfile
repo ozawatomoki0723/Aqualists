@@ -64,4 +64,6 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 gem 'devise', '~> 4.6.1'
 gem 'carrierwave', '~> 1.0'
+gem 'fog-aws'
+gem 'mini_magick'
 gem 'pg', group: :production
