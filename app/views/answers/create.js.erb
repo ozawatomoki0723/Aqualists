@@ -1,0 +1,3 @@
+$('#answer-question-<%= @question.id.to_s %>').
+  html('<%= j render "questions/answer_list", { question: @question } %>');
+$('#answer-form-question-<%= @question.id.to_s %> #answer_answer').val("");

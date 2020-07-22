@@ -3,14 +3,17 @@ Rails.application.routes.draw do
   controllers: { registrations: 'registrations' }
 
 root 'posts#index'
-
+get 'about' => 'posts#about'
 resources :users
 resources :posts, only: %i(new create index show destroy) do
-resources :photos, only: %i(create)
-resources :likes, omly: %i(create destroy)
-resources :comments, only: %i(create destroy)
+ resources :photos, only: %i(create)
+ resources :likes, omly: %i(create destroy)
+ resources :comments, only: %i(create destroy)
 end
+
 resources :questions, only: %i(new create index show destroy)do
-resources :qphotos, only: %i(create)
+ resources :qphotos, only: %i(create)
+ resources :answers, only: %i(create destroy)
 end
+
 end

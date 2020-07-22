@@ -12,7 +12,7 @@
           <% end %>
           <% if question.user_id == current_user.id %>
             <%= link_to question_path(question), method: :delete, class: "ml-auto mx-0 my-auto" do %>
-              <div class="delete-post-icon">
+              <div class="delete-question-icon">
               </div>
             <% end %>
           <% end %>
@@ -28,17 +28,21 @@
             <span><%= question.title %></span>
             <p><%= question.body %><p>
             <%= link_to time_ago_in_words(question.created_at).upcase + "前", "#", class: "question-time no-text-decoration" %>
+            <div id="comment-question-<%= question.id.to_s %>">
+              <%= render 'answer_list', { question: question } %>
+            </div>
+            <%= link_to time_ago_in_words(question.created_at).upcase + "前", question_path(question),
+              class: "light-color question-time no-text-decoration" %>
             <hr>
-            <div class="row parts">
-              <form action="#" class="w-100">
-                <div>
-                  <textarea class="form-control comment-input border-0" placeholder="コメント..." rows="1"></textarea>
-                </div>
-              </form>
+            <div class="row actions" id="comment-form-question-<%= question.id.to_s %>">
+              <%= form_with model: [question, Answer.new], class: "w-100" do |f| %>
+                <%= f.hidden_field :user_id, value: current_user.id %>
+                <%= f.hidden_field :question_id, value: question.id %>
+                <%= f.text_field :answer, class: "form-control comment-input border-0", placeholder: "コメント ...", autocomplete: :off %>
+              <% end %>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 <% end %>
