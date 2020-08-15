@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 	def about
 	end
 
-	def  new
+	def  newS
 		@post = Post.new
 		@post.photos.build
 	end

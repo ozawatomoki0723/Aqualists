@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :users,
   controllers: { registrations: 'registrations' }
 
-root 'posts#index'
+devise_scope :user do
+root :to => "devise/sessions#new"
+end
 get 'about' => 'posts#about'
 resources :users
 resources :posts, only: %i(new create index show destroy) do
