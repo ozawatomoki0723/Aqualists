@@ -35,6 +35,15 @@
           <p> <%= @user.email %></p>
         </div>
       <% end %>
+      <tbody>
+   <% @posts.each do |post| %>
+   <div class="card">
+         <%=link_to post.caption,post_path(post.id) %>
+         <%=image_tag post.photos.first.image.url, class: "card-img-top" %>
+    </div>
+  <% end %>
+  </div>
+ </tboby>
     </div>
   </div>
 </div>
