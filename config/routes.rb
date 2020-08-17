@@ -7,7 +7,7 @@ root :to => "devise/sessions#new"
 end
 get 'about' => 'posts#about'
 resources :users
-resources :posts, only: %i(new create index show destroy) do
+resources :posts, only:[:index, :show, :new, :create, :destroy,] do
  resources :photos, only: %i(create)
  resources :likes, omly: %i(create destroy)
  resources :comments, only: %i(create destroy)
