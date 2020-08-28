@@ -1,6 +1,10 @@
 class ImageUploader < CarrierWave::Uploader::Base
- 
-    storage :fog
+
+if Rails.env.production?
+  storage :fog
+else
+  storage :file
+end
 
 
   def store_dir
