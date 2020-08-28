@@ -65,6 +65,7 @@ gem 'jquery-rails'
 gem 'devise', '~> 4.6.1'
 gem 'carrierwave', '~> 1.0'
 gem 'dotenv-rails'
+gem 'fog-aws'
 group :production do
   gem 'mysql2'
 end
