@@ -66,6 +66,8 @@ gem 'devise', '~> 4.6.1'
 gem 'carrierwave', '~> 1.0'
 gem 'dotenv-rails'
 gem 'fog-aws'
+gem "haml-rails"
+gem 'erb2haml'
 group :production do
   gem 'mysql2'
 end

@@ -1,0 +1,13 @@
+%nav.navbar.navbar-expand-lg.navbar-light
+  .container
+    = link_to "", root_path, class: "navbar__brand navbar__mainLogo"
+    %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      %ul.navbar-nav.ml-md-auto.align-items-center
+        %li= link_to "ABOUT", about_path, class: "btn btn-info"
+        %li= link_to "質問する", new_question_path, class: "btn btn-success"
+        %li= link_to "質問一覧", questions_path, class: "btn btn-secondary"
+        %li= link_to "投稿する", new_post_path, class: "btn btn-primary"
+        %li
+          = link_to "マイページ", user_path(current_user), class: "btn btn-light"
