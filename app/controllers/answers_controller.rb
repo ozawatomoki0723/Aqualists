@@ -1,8 +1,7 @@
 class AnswersController < ApplicationController
+  before_action :authenticate_user!
 
-   before_action :authenticate_user!
-
-   def create
+  def create
     @answer = Answer.new(answer_params)
     @question = @answer.question
     if @answer.save
@@ -12,7 +11,7 @@ class AnswersController < ApplicationController
     end
   end
 
-   def destroy
+  def destroy
     @answer = Answer.find_by(id: params[:id])
     @question = @answer.question
     if @answer.destroy
@@ -23,7 +22,8 @@ class AnswersController < ApplicationController
   end
 
   private
-    def answer_params
-      params.require(:answer).permit(:user_id, :question_id, :answer)
-    end
+
+  def answer_params
+    params.require(:answer).permit(:user_id, :question_id, :answer)
+  end
 end
